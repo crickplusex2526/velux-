@@ -1,72 +1,135 @@
- 29
-Message notifications are off. Turn onLocked chats12:15 am12:05 am83Yesterday59Yesterday12YesterdayYesterdayYesterdayYesterdayYesterdayYesterday77Yesterday1FridayFridayFridayFriday9FridayFriday2FridayAdd to list
-Yesterday
-function doPost(e) {
-  try {
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    const data = JSON.parse(e.postData.contents);
-
-    sheet.appendRow([
-      data.orderId || "",
-      new Date(),
-      data.name || "",
-      data.mobile || "",
-      data.address || "",
-      data.city || "",
-      data.state || "",
-      data.pincode || "",
-      data.productNumber || "",
-      data.size || "",
-      data.quantity || "",
-      data.amount || "",
-      data.paymentMethod || "",
-      data.paymentStatus || "",
-      data.orderStatus || ""
-    ]);
-
-    return ContentService
-      .createTextOutput(JSON.stringify({
-        success: true,
-        message: "Order saved"
-      }))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch … Read more
-11:14 pm
-script.google.com
-https://script.google.com/macros/s/AKfycbzrYR52fJ0706-D3Ga7F0qjzs3aumrCPOQqB4emt6chjT3GQoOAkR1YTxhjvOWfFMLlQQ/exec
-script.google.com
-https://script.google.com/macros/s/AKfycbzrYR52fJ0706-D3Ga7F0qjzs3aumrCPOQqB4emt6chjT3GQoOAkR1YTxhjvOWfFMLlQQ/exec
-11:20 pm
-https://github.com/crickplusex2526/tennispilot/settings
-11:53 pm
-Today
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Velux Premium Fashion Store</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="top">
-  <div class="brand">VELUX <span>PREMIUM STORE</span></div>
+  <!-- HEADER -->
+  <header class="top">
 
-  <nav>
-    <button class="nav-btn active" data-filter="all">All</button>
-    <button class="nav-btn" data-filter="shoes">Shoes</button>
-    <button class="nav-btn" data-filter="fashion">Fashion</button>
-    <button class="nav-btn" data-filter="offers">Offers</button>
-  </nav>
-</header>
+    <div class="brand">
+      VELUX <span>PREMIUM STORE</span>
+    </div>
 
-<section class="hero">
-  <p>PREMIUM COLLECTION</p>
-  <h1>Premium Fashion<br>For Every Style</h1>
-  <p>Quality products • Secure payment • Reliable deliver… Read more
-12:15 am
+    <nav>
+
+      <button
+        type="button"
+        class="nav-btn active"
+        data-filter="all">
+        All
+      </button>
+
+      <button
+        type="button"
+        class="nav-btn"
+        data-filter="shoes">
+        Shoes
+      </button>
+
+      <button
+        type="button"
+        class="nav-btn"
+        data-filter="fashion">
+        Fashion
+      </button>
+
+      <button
+        type="button"
+        class="nav-btn"
+        data-filter="offers">
+        Offers
+      </button>
+
+    </nav>
+
+  </header>
 
 
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <p>PREMIUM COLLECTION</p>
+
+    <h1>
+      Premium Fashion
+      <br>
+      For Every Style
+    </h1>
+
+    <p>
+      Quality products • Secure payment • Reliable delivery
+    </p>
+
+  </section>
+
+
+  <!-- PRODUCT SECTION -->
+  <main>
+
+    <div
+      id="productGrid"
+      class="product-grid">
+    </div>
+
+  </main>
+
+
+  <!-- TRUST SECTION -->
+  <section class="trust">
+
+    <div>
+      <h3>🔒 Secure Payment</h3>
+      <p>Safe and secure checkout</p>
+    </div>
+
+    <div>
+      <h3>💳 COD Available</h3>
+      <p>Cash on Delivery available</p>
+    </div>
+
+    <div>
+      <h3>🔄 Easy Returns</h3>
+      <p>Easy return and exchange</p>
+    </div>
+
+    <div>
+      <h3>🚚 Reliable Delivery</h3>
+      <p>Fast and reliable delivery</p>
+    </div>
+
+    <div>
+      <h3>📞 Customer Support</h3>
+      <p>We are here to help</p>
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 VELUX PREMIUM STORE
+    </p>
+
+    <p>
+      Premium Collection • Quality Products
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
