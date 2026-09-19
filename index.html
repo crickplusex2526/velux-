@@ -1,64 +1,72 @@
-<!doctype html>
+ 29
+Message notifications are off. Turn onLocked chats12:15 am12:05 am83Yesterday59Yesterday12YesterdayYesterdayYesterdayYesterdayYesterdayYesterday77Yesterday1FridayFridayFridayFriday9FridayFriday2FridayAdd to list
+Yesterday
+function doPost(e) {
+  try {
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    const data = JSON.parse(e.postData.contents);
+
+    sheet.appendRow([
+      data.orderId || "",
+      new Date(),
+      data.name || "",
+      data.mobile || "",
+      data.address || "",
+      data.city || "",
+      data.state || "",
+      data.pincode || "",
+      data.productNumber || "",
+      data.size || "",
+      data.quantity || "",
+      data.amount || "",
+      data.paymentMethod || "",
+      data.paymentStatus || "",
+      data.orderStatus || ""
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        success: true,
+        message: "Order saved"
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch … Read more
+11:14 pm
+script.google.com
+https://script.google.com/macros/s/AKfycbzrYR52fJ0706-D3Ga7F0qjzs3aumrCPOQqB4emt6chjT3GQoOAkR1YTxhjvOWfFMLlQQ/exec
+script.google.com
+https://script.google.com/macros/s/AKfycbzrYR52fJ0706-D3Ga7F0qjzs3aumrCPOQqB4emt6chjT3GQoOAkR1YTxhjvOWfFMLlQQ/exec
+11:20 pm
+https://github.com/crickplusex2526/tennispilot/settings
+11:53 pm
+Today
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Premium Fashion Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velux Premium Fashion Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header class="top">
-  <div class="brand">PREMIUM<span>STORE</span></div>
+  <div class="brand">VELUX <span>PREMIUM STORE</span></div>
+
   <nav>
     <button class="nav-btn active" data-filter="all">All</button>
-    <button class="nav-btn" data-filter="Fashion">Fashion</button>
-    <button class="nav-btn" data-filter="Shoes">Shoes</button>
+    <button class="nav-btn" data-filter="shoes">Shoes</button>
+    <button class="nav-btn" data-filter="fashion">Fashion</button>
     <button class="nav-btn" data-filter="offers">Offers</button>
   </nav>
 </header>
 
 <section class="hero">
-  <div>
-    <p class="eyebrow">NEW SEASON • PREMIUM COLLECTION</p>
-    <h1>Style that feels<br><span>premium.</span></h1>
-    <p>Premium fashion & shoes, carefully selected for your everyday style.</p>
-    <a href="#products" class="hero-btn">Shop Collection</a>
-  </div>
-</section>
+  <p>PREMIUM COLLECTION</p>
+  <h1>Premium Fashion<br>For Every Style</h1>
+  <p>Quality products • Secure payment • Reliable deliver… Read more
+12:15 am
 
-<section class="trust">
-  <div><b>🔒 Secure Payment</b><small>Safe online payment</small></div>
-  <div><b>📦 COD Available</b><small>Pay on delivery</small></div>
-  <div><b>🔄 Easy Returns</b><small>On eligible products</small></div>
-  <div><b>🚚 Reliable Delivery</b><small>Carefully packed orders</small></div>
-</section>
 
-<main id="products">
-  <div class="section-head">
-    <div><p class="eyebrow">OUR COLLECTION</p><h2>Premium Collection</h2></div>
-    <span id="count"></span>
-  </div>
-  <div id="grid" class="grid"></div>
-</main>
-
-<section class="confidence">
-  <h2>Shop With Confidence ❤️</h2>
-  <p>Quality • Transparency • Customer Satisfaction</p>
-  <div class="confidence-grid">
-    <div><b>Secure Checkout</b><span>Your order details are sent securely.</span></div>
-    <div><b>COD + Prepaid</b><span>Choose the payment method you prefer.</span></div>
-    <div><b>Returns & Exchange</b><span>Eligible products can be returned or exchanged according to our policy.</span></div>
-  </div>
-</section>
-
-<div id="modal" class="modal hidden">
-  <div class="modal-card">
-    <button class="close" id="closeModal">×</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
-
-<footer>© 2026 Premium Store • All rights reserved</footer>
-<script src="script.js"></script>
-</body>
-</html>
