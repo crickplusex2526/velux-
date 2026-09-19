@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Premium Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">PREMIUM<span>STORE</span></div>
+  <nav>
+    <button class="nav-btn active" data-filter="all">All</button>
+    <button class="nav-btn" data-filter="Fashion">Fashion</button>
+    <button class="nav-btn" data-filter="Shoes">Shoes</button>
+    <button class="nav-btn" data-filter="offers">Offers</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">NEW SEASON • PREMIUM COLLECTION</p>
+    <h1>Style that feels<br><span>premium.</span></h1>
+    <p>Premium fashion & shoes, carefully selected for your everyday style.</p>
+    <a href="#products" class="hero-btn">Shop Collection</a>
+  </div>
+</section>
+
+<section class="trust">
+  <div><b>🔒 Secure Payment</b><small>Safe online payment</small></div>
+  <div><b>📦 COD Available</b><small>Pay on delivery</small></div>
+  <div><b>🔄 Easy Returns</b><small>On eligible products</small></div>
+  <div><b>🚚 Reliable Delivery</b><small>Carefully packed orders</small></div>
+</section>
+
+<main id="products">
+  <div class="section-head">
+    <div><p class="eyebrow">OUR COLLECTION</p><h2>Premium Collection</h2></div>
+    <span id="count"></span>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+
+<section class="confidence">
+  <h2>Shop With Confidence ❤️</h2>
+  <p>Quality • Transparency • Customer Satisfaction</p>
+  <div class="confidence-grid">
+    <div><b>Secure Checkout</b><span>Your order details are sent securely.</span></div>
+    <div><b>COD + Prepaid</b><span>Choose the payment method you prefer.</span></div>
+    <div><b>Returns & Exchange</b><span>Eligible products can be returned or exchanged according to our policy.</span></div>
+  </div>
+</section>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button class="close" id="closeModal">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<footer>© 2026 Premium Store • All rights reserved</footer>
+<script src="script.js"></script>
+</body>
+</html>
